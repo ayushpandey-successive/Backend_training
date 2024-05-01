@@ -1,14 +1,15 @@
 const express = require('express');
 
 let Router = express.Router()
-const {createPost,getPost,manuallyAddPost}=require("../controllers/postControllers")
+const {createUser,getUser,protectedroute}=require("../controllers/postControllers")
+const authenticateJWT=require("../middleware/authmiddleware")
 
 
 // Route to get all posts
-Router.get('/generator',createPost );
-Router.get('',getPost)
+Router.get('/generator',createUser );
+Router.get('',getUser)
+Router.get('/protected-route',authenticateJWT,protectedroute);
 
-// Route to add a new post (simulated)
-Router.post('/add',manuallyAddPost);
+
 
 module.exports = Router
