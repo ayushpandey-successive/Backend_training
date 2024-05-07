@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "express-validator": "^7.0.1",
+    "geoip-lite": "^1.4.10",
+    "joi": "^17.13.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "rate-limiter-flexible": "^5.0.3",
+    "request-ip": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.8",
+    "typescript": "^5.4.5"
+  }
+}
