@@ -53,7 +53,7 @@ app.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
   
-    const token = jwt.sign({ username: user.username }, 'Anant_Mishra', { expiresIn: '1h' });
+    const token = jwt.sign({ username: user.username }, 'AyushPandey123', { expiresIn: '1h' });
     res.status(200).json({ message: 'Login successful', token });
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
@@ -71,7 +71,7 @@ function verifyToken(req, res, next) {
   if (!token) {
     return res.status(403).json({ error: 'Token not provided' });
   }
-  jwt.verify(token, 'Anant_Mishra', (err, decoded) => {
+  jwt.verify(token, 'AyushPandey123', (err, decoded) => {
     if (err) {
       return res.status(401).json({ error: 'Failed to authenticate token' });
     }
